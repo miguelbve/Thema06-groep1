@@ -1,12 +1,12 @@
 ---
 title: "R Notebook"
-author: "Miguel Botter van Elburg"
+author: "Jurriën de Jong, Susan Reefman, Marnix Sikkema, Jorick Baron en Miguel Botter van Elburg"
 date: "`r Sys.Date()`"
 output:
   pdf_document:
     toc: true # Add table of contents
     toc_depth: 2
-    number_sections: true
+    number_sections: false
 toc: true # Generates table of contents
 bibliography: bibliography.bib # Including bibliographies
 csl: ieee.csl # Changing citation style
@@ -24,9 +24,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Materiaal
 
+Dit is geschreven adhv [@knitr2015] 
 
 ## Methode
 
+BLA
 
 ## Conclusie & Discussie
 
