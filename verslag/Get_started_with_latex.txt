@@ -1,0 +1,87 @@
+\documentclass{article}
+
+% Pictures
+\usepackage{graphicx}
+\usepackage{float}
+
+% Math and Font
+\usepackage{mathptmx}
+
+% APA citation 
+\usepackage{apacite}
+
+% CogSci RuG template (try commenting it out to see how the 'normal' article looks like.
+\usepackage{cogsci}
+
+\title{Some handy tips and tricks of getting started with LaTex}
+\author{Maximilian Velich\\ Basic Scientific Skills}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+This is an abstract. It's a bit smaller than other text.
+\end{abstract}
+
+\section{Introduction}
+This is how you make a new section! There are also subsections, but for smaller reports like these, you usually do not need them.\\ \textbf{Intermission!} Oh! That text is bold, and in a new line as well. How \emph{emphasising}! Figure out how that was done...
+% The pdf-people cannot read this, for that it is but a comment. Worry not, here you can really explain how you feel!
+
+\paragraph{A paragraph with title} In contrast to sections, paragraphs are for more structural additions to you text. Use paragraphs to leave more formatting to LaTex. The more LaTex handles, the better for you! Here are empty reasons to show lists: 
+
+	\begin{itemize}
+		\item First Reason
+		\item[*] Another Reason
+		\item[--] Definitely the best reason
+	\end{itemize}
+	
+\paragraph{Figure and Images} There is an important difference between \emph{images} and \emph{figures} in LaTex. Figures can contain images, but also tables, formulas and much more. The advantage of using figures is that it is easier to reference and format (e.g. with captions, which are important for citations). For example, Figure \ref{fig:image}, is referenced using an automatic tracker, so that you do not have to worry about changing numbers later, in case you insert images before this image.
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{assets/image}	
+		\caption{An obviously important graph that shows the mean occurrences ($\pm SE$) of something \emph{clever} of participants over different amounts of \emph{something else}.}
+		\label{fig:image}
+	\end{figure}
+
+\section{Technicalities}
+
+\paragraph{Math} The real beauty starts with math. You will get used to typing the code quicker than you think, and it ends up being cleaner and (surprisingly) faster. Here is an example:
+	\begin{eqnarray}
+        \int_1^3 2 \cdot e^{-j\frac{\pi}{4}kt}~\mathrm{d}t &=& 
+        2\int_1^3 e^{-j\frac{\pi}{4}kt}~\mathrm{d}t\\
+        &=& \frac{2}{-j\frac{\pi}{4}k} \bigg[ e^{-j\frac{3\pi}{4}k} - e^{-j\frac{\pi}{4}k} \bigg]\\
+        &=& \frac{8j}{\pi k} \bigg[ e^{-j\frac{3\pi}{4}k} - e^{-j\frac{\pi}{4}k} \bigg]\\
+        &=& \frac{8j}{\pi k} e^{-j\frac{3\pi}{4}k} + \frac{-8j}{\pi k} e^{-j\frac{\pi}{4}k}
+	\end{eqnarray}
+	
+\paragraph{Tables} Tables are straightforward if you have seen the code. In Table \ref{fig:table} is a small example. Notice how the table is also embedded in a figure, just as the image from before. 
+
+\begin{table}[h]
+	\centering
+	\caption{This is a very insignificant but cute table displaying some important numbers}
+	\begin{tabular}{ l  c  r }
+		\hline
+	    1 & 2 & 3 \\ \hline
+	    4 & 5 & 6 \\ \hline
+	    7 & 8 & 9 \\
+	    \hline
+	\end{tabular}
+	\label{fig:table}
+\end{table}
+
+\paragraph{References} According to \citeA{DrMadeUp2018}, citations are somewhat important. There are different styles of citations however \cite{DrMadeUp2018}. Watch and see how the references are automatically filled in at the end.\\
+For this to work as demonstrated, you need to provide an extra file next to your \emph{.tex} file. This file is just a text file ending in \emph{.bib}. Have a look and see how references are provided. For most papers you can just important the modules directly from portals like SmartCat.\\
+Note, the references list (in APA in this case), is handled completely by LaTex. No need to worry about wrong formatting. See in code, how it is done.
+
+\paragraph{Compiler} A free online compiler that has multi-user support is \textbf{Overleaf}. Try it out, you will get used to LaTex in no time! You might even enjoy it after a while.
+
+\bibliographystyle{apacite}
+
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{references}
+
+\end{document}
