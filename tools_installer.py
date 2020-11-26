@@ -1,5 +1,5 @@
 """
-Pre-installed command-line tools:
+Pre-installed command-line tools on bioinf.nl:
 Picard:             picard-tools
 Hisat:              hisat2
 FastQC:             fastqc
@@ -35,12 +35,9 @@ def install_tools():
     f"echo 'source ~/.bashrc\n"
     f"export PATH=$PATH:~/.local/bin\n"
     f"export PATH=$PATH:~/TrimGalore-0.6.6\n"
-    f"export PATH=$PATH:~/subread-2.0.1-Linux-x86_64/bin"
-    f"# Setting for the new UTF-8 terminal support in Lion\n"
-    f"LC_CTYPE=en_US.UTF-8\n"
-    f"LC_ALL=en_US.UTF-8' >> ~/.bash_profile && source ~/.bashrc && "
+    f"export PATH=$PATH:~/subread-2.0.1-Linux-x86_64/bin' >> ~/.bash_profile && source ~/.bash_profile && "
     
-    # change to the the begin directory
+    # change to the initial directory
     f"cd -", shell=True, executable="/bin/bash") # executes the commands through using the bash shell
 
 
