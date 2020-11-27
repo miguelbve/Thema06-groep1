@@ -36,7 +36,7 @@ def install_tools():
     f"echo 'source ~/.bashrc\n"
     f"export PATH=$PATH:~/.local/bin\n"
     f"export PATH=$PATH:~/TrimGalore-0.6.6\n"
-    f"export PATH=$PATH:~/subread-2.0.1-Linux-x86_64/bin' > ~/.bash_profile && source ~/.bash_profile && "
+    f"export PATH=$PATH:~/subread-2.0.1-Linux-x86_64/bin' > ~/.bash_profile && source ~/.bash_profile && exec bash && "
     
     # change to the initial directory
     f"cd -", shell=True, executable="/bin/bash") # executes the commands through using the bash shell
@@ -54,10 +54,12 @@ def uninstall_tools():
     # uninstall Subread package that includes featureCounts, exactSNP, subindel, subjunc, sublong, subread-align and subread-buildindex
     f"rm -rf subread-2.0.1-Linux-x86_64 && "
     # remove the .bash_profile, since all the tools are uninstalled. We don't need the specified paths anymore.
-    f"rm -rf .bash_profile && source ~/.bashrc && "
+    f"rm -rf .bash_profile && exec bash && source ~/.bashrc && "
     
     # change to the initial directory
-    f"cd - && exec bash", shell=True, executable="/bin/bash")
+    f"cd - ", shell=True, executable="/bin/bash")
+    print("Successfully uninstalled TrimGalore-0.6.6\n"
+          "Successfully uninstalled subread-2.0.1-Linux-x86_64")
 
 
 
@@ -68,8 +70,6 @@ def main():
     args = parser.parse_args()
     if args.uninstall:
         uninstall_tools()
-        print("Successfully uninstalled TrimGalore-0.6.6\n"
-              "Successfully uninstalled subread-2.0.1-Linux-x86_64")
     else:
         install_tools()
 
