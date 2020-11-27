@@ -29,7 +29,7 @@ def install_tools():
     # install Trim Galore
     f"curl -LO https://github.com/FelixKrueger/TrimGalore/archive/0.6.6.zip && unzip 0.6.6.zip && rm -rf 0.6.6.zip && "
     # install Subread package that includes featureCounts, exactSNP, subindel, subjunc, sublong, subread-align and subread-buildindex
-    f"curl -LO https://sourceforge.net/projects/subread/files/subread-2.0.1/subread-2.0.1-Linux-x86_64.tar.gz &&" 
+    f"curl -LO https://sourceforge.net/projects/subread/files/subread-2.0.1/subread-2.0.1-Linux-x86_64.tar.gz && " 
     f"tar -xzvf subread-2.0.1-Linux-x86_64.tar.gz && rm -rf subread-2.0.1-Linux-x86_64.tar.gz && "  
                    
     # create a .bash_profile, and add the paths that redirect to the installed tools
