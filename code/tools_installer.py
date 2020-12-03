@@ -12,7 +12,6 @@ Trim Galore:        trim_galore
 featureCounts:      featureCounts (from the Subread package)
 """
 
-__author__ = "Miguel"
 __date__ = "2020-11-26"
 
 
