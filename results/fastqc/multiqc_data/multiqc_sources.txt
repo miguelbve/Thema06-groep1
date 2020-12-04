@@ -1,0 +1,11 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR018013_1	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR018013_1.fastq/SRR018013_1_fastqc.zip
+FastQC	all_sections	SRR018013_2	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR018013_2.fastq/SRR018013_2_fastqc.zip
+FastQC	all_sections	SRR018015	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR018015.fastq/SRR018015_fastqc.zip
+FastQC	all_sections	SRR057598	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR057598.fastq/SRR057598_fastqc.zip
+FastQC	all_sections	SRR057599	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR057599.fastq/SRR057599_fastqc.zip
+FastQC	all_sections	SRR1106118	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR1106118.fastq/SRR1106118_fastqc.zip
+FastQC	all_sections	SRR1106122	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR1106122.fastq/SRR1106122_fastqc.zip
+FastQC	all_sections	SRR1106138	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR1106138.fastq/SRR1106138_fastqc.zip
+FastQC	all_sections	SRR1106139	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR1106139.fastq/SRR1106139_fastqc.zip
+FastQC	all_sections	SRR1106140	/homes/lmabottervanelburg/Thema06-repo/results/fastqc/SRR1106140.fastq/SRR1106140_fastqc.zip
