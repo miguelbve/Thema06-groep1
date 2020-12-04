@@ -7,6 +7,7 @@ usage:
 
 import subprocess
 import argparse
+import multiqc
 
 
 def execute_fastqc():
@@ -19,10 +20,15 @@ def execute_fastqc():
         for fastqfile, fastqdir in zip(fastqfiles, fastqdirs):
             subprocess.run(["fastqc", fastqfile, '-o', fastqdir], text=True)
 
+def summarize_read_qual():
+    """ Summarize the read qualities with a multiqc """
+    multiqc.run("../results/fastqc/", outdir="../results/fastqc/", make_pdf=True, no_data_dir=True)
+
 
 def main():
     """ main """
-    execute_fastqc()
+    # execute_fastqc()
+    summarize_read_qual()
 
 
 if __name__ == "__main__":
