@@ -57,6 +57,7 @@ def main():
     log_data_files(args.data_path)
     log_data_path(args.data_path)
     make_fastq_dirs()
+    make_trim_galore_dirs()
 
 
 if __name__ == "__main__":
