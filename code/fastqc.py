@@ -26,7 +26,7 @@ def summarize_read_qual():
 
 def main():
     """ main """
-    # execute_fastqc()
+    execute_fastqc()
     summarize_read_qual()
 
 

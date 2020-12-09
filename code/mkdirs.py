@@ -10,11 +10,6 @@ SRR018013_2.fastq.gz  SRR057598.fastq.gz  SRR1106118.fastq.gz  SRR1106138.fastq.
 
 usage:
     python3 mkdirs.py /data/storix2/student/2019-2020/Thema06/project-data/How_to_deal_with_difficult_data/Data/ /data/storix2/student/2020-2021/Thema06/project-data/
-
-output:
-    scanned_fastq_files.log     file
-    scanned_data_path.log       file
-    data                        directory
 """
 
 import subprocess
