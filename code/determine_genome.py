@@ -6,7 +6,7 @@ __date__ = "2020-12-6"
 __version__ = 2
 
 import subprocess
-import tqdm
+from tqdm import tqdm
 
 
 def get_fastq_queries():
@@ -20,7 +20,8 @@ def get_fastq_queries():
 def write_txt(esearch_queries):
     """ Perform esearch and write outcome to txt file. Log the made txt files """
     data_paths = []
-    for item in esearch_queries:
+    print("Writing the output of esearch SRA to logs/*.txt")
+    for item in tqdm(esearch_queries):
         subprocess.run(f'esearch -db SRA -query "{item}" | efetch -format native > ../logs/{item}.txt', 
                         shell=True, executable="/bin/bash")
         data_paths.append(f'{item}.txt \n')
@@ -29,8 +30,7 @@ def write_txt(esearch_queries):
     with open('../logs/txt_files.log', 'w') as file_obj:
          for i in data_paths:
              file_obj.write(i)       
-    file_obj.close()                    
-    print("Writing txt files of the esearch in SRA")
+    file_obj.close()
     
     return data_paths
 
