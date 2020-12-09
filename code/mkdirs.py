@@ -37,6 +37,14 @@ def make_fastq_dirs():
         subprocess.run(["rm", "-vrf", "results/fastqc"], text=True) # remove if exist, notify user
         for dir in fastqdirs:
             subprocess.run(["mkdir", "-vp", dir], text=True) # make fastqc dirs, notify user
+            
+def make_trim_galore_dirs():
+    """ Makes data directories and names them based on their .fastq.gz file extension """
+    with open('../logs/fastq_files.log') as file_obj:
+        fastqdirs = ["../results/trim_galore/"+file[0:-4] for file in file_obj]
+        subprocess.run(["rm", "-vrf", "results/trim_galore"], text=True) # remove if exist, notify user
+        for dir in fastqdirs:
+            subprocess.run(["mkdir", "-vp", dir], text=True) # make fastqc dirs, notify user
 
 def main():
     """ main """
