@@ -8,7 +8,6 @@ __version__ = 2
 import subprocess
 import tqdm
 
-'esearch -db SRA -query "SRR1106139" | efetch -format native > second_temp.xml'
 
 def get_fastq_queries():
     """ """
@@ -16,7 +15,6 @@ def get_fastq_queries():
         esearch_queries = [fastq[0:-10] for fastq in fastqlog if not "_" in fastq]
         fastqlog.seek(0)
         esearch_paired_queries = [fastq[0:-12] for fastq in fastqlog if "_" in fastq]
-    fastqlog.close()
         return esearch_queries + esearch_paired_queries
 
 def write_txt(esearch_queries):
@@ -49,7 +47,7 @@ def determine_organism(data_paths):
                     index_last = line.find(">")
                     organism = line[:index_last]
         dict_txt[i[:-4]] = organism[10:-1]
-	txt.close()
+    txt.close()
     return dict_txt
 
 
