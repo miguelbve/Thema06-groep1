@@ -1,0 +1,97 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /data/storix2/student/2020-2021/Thema06/project-data/How_to_deal_with_difficult_data/Data/SRR057599.fastq.gz
+Trimming mode: single-end
+Trim Galore version: 0.6.6
+Cutadapt version: 3.1
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 95). Second best hit was Nextera (count: 1)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 20 bp
+Running FastQC on the data once trimming has completed
+Running FastQC with the following extra arguments: --outdir ../results/trim_galore/SRR057599.fastq
+Output file will be GZIP compressed
+
+
+This is cutadapt 3.1 with Python 3.7.3
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC /data/storix2/student/2020-2021/Thema06/project-data/How_to_deal_with_difficult_data/Data/SRR057599.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 140.03 s (9 µs/read; 6.77 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              15,795,216
+Reads with adapters:                 4,620,578 (29.3%)
+Reads written (passing filters):    15,795,216 (100.0%)
+
+Total basepairs processed:   631,808,640 bp
+Quality-trimmed:              14,833,027 bp (2.3%)
+Total written (filtered):    610,282,895 bp (96.6%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 4620578 times
+
+No. of allowed errors:
+1-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 20.1%
+  C: 41.6%
+  G: 23.4%
+  T: 14.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	3011008	3948804.0	0	3011008
+2	1296350	987201.0	0	1296350
+3	237930	246800.2	0	237930
+4	55283	61700.1	0	55283
+5	12613	15425.0	0	12613
+6	2000	3856.3	0	2000
+7	630	964.1	0	630
+8	249	241.0	0	249
+9	510	60.3	0	125 385
+10	523	15.1	1	123 400
+11	984	3.8	1	68 916
+12	162	0.9	1	97 65
+13	45	0.2	1	29 16
+14	64	0.2	1	39 25
+15	90	0.2	1	73 17
+16	26	0.2	1	14 12
+17	87	0.2	1	63 24
+18	60	0.2	1	26 34
+19	125	0.2	1	100 25
+20	522	0.2	1	473 49
+21	968	0.2	1	879 89
+22	28	0.2	1	9 19
+23	12	0.2	1	1 11
+24	29	0.2	1	9 20
+25	12	0.2	1	2 10
+26	28	0.2	1	20 8
+27	12	0.2	1	0 12
+28	9	0.2	1	1 8
+29	24	0.2	1	2 22
+30	6	0.2	1	1 5
+31	20	0.2	1	1 19
+32	8	0.2	1	1 7
+33	2	0.2	1	0 2
+34	10	0.2	1	1 9
+35	8	0.2	1	0 8
+36	3	0.2	1	0 3
+37	44	0.2	1	4 40
+38	13	0.2	1	3 10
+39	16	0.2	1	2 14
+40	65	0.2	1	0 65
+
+RUN STATISTICS FOR INPUT FILE: /data/storix2/student/2020-2021/Thema06/project-data/How_to_deal_with_difficult_data/Data/SRR057599.fastq.gz
+=============================================
+15795216 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 20 bp:	134855 (0.9%)
+

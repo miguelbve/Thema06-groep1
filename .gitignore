@@ -6,4 +6,5 @@ __pycache__
 .DS_Store
 __MACOSX
 .idea
-
+*_trimmed_fastqc.zip
+*_trimmed.fq.gz
